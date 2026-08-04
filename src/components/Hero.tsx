@@ -51,15 +51,13 @@ export default function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={200} className="relative mx-auto w-full max-w-md">
-          <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-navy/10 shadow-[8px_8px_0_0_rgba(124,107,240,0.9)]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/background.png"
-              alt=""
-              className="h-full w-full object-cover"
-            />
-          </div>
+        <Reveal delay={200} className="relative mx-auto w-full max-w-sm">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/background.png"
+            alt=""
+            className="h-auto w-full"
+          />
         </Reveal>
       </div>
     </section>
