@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { db } from "@/lib/firebase";
 import Reveal from "./Reveal";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -18,17 +20,20 @@ export default function Contact() {
     const data = Object.fromEntries(new FormData(form).entries());
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+      // Write the submission to the "contacts" Firestore collection.
+      await addDoc(collection(db, "contacts"), {
+        name: String(data.name ?? "").trim(),
+        email: String(data.email ?? "").trim(),
+        company: String(data.company ?? "").trim(),
+        message: String(data.message ?? "").trim(),
+        createdAt: serverTimestamp(),
       });
-      if (!res.ok) throw new Error("Request failed");
       setStatus("success");
       form.reset();
-    } catch {
+    } catch (err) {
+      console.error("[Contact] submission failed", err);
       setStatus("error");
-      setError("Something went wrong. Please try again or email us directly.");
+      setError("Something went wrong. Please try again in a moment.");
     }
   }
 
@@ -46,15 +51,6 @@ export default function Contact() {
           </h2>
 
           <div className="mt-10 space-y-3 font-mono text-sm text-cream/70">
-            <p>
-              <span className="text-cream/40">EMAIL · </span>
-              <a
-                href="mailto:hello@appscale.studio"
-                className="underline-offset-4 hover:underline"
-              >
-                hello@appscale.studio
-              </a>
-            </p>
             <p>
               <span className="text-cream/40">BASED · </span>
               San Francisco, CA
