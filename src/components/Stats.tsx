@@ -30,7 +30,7 @@ export default function Stats() {
             <Reveal
               key={s.label}
               delay={i * 90}
-              className="border-l border-cream/15 pl-6 first:border-l-0 first:pl-0 lg:border-l lg:first:border-l lg:first:pl-6"
+              className="text-center sm:border-l sm:border-cream/15 sm:first:border-l-0"
             >
               <div className="font-serif text-5xl tracking-tight sm:text-6xl">
                 {s.value}
