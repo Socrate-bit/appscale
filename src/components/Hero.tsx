@@ -1,4 +1,3 @@
-import Orbit from "./Orbit";
 import Reveal from "./Reveal";
 
 export default function Hero() {
@@ -53,7 +52,14 @@ export default function Hero() {
         </div>
 
         <Reveal delay={200} className="relative mx-auto w-full max-w-md">
-          <Orbit className="h-auto w-full" />
+          <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-navy/10 shadow-[8px_8px_0_0_rgba(124,107,240,0.9)]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/background.png"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
         </Reveal>
       </div>
     </section>
