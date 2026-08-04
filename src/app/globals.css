@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-cream: #f0ede4;
+  --color-cream-100: #f6f4ee;
+  --color-cream-200: #eae6da;
+  --color-navy: #0c1a2b;
+  --color-navy-800: #101f33;
+  --color-navy-700: #16263d;
+  --color-accent: #7c6bf0;
+  --color-accent-soft: #a99cf5;
+  --color-muted: #5c6672;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-marquee: marquee 32s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
 
+:root {
+  color-scheme: light;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-navy);
+}
+
+/* Subtle dotted-grid texture used across light sections */
+.dot-grid {
+  background-image: radial-gradient(
+    rgba(12, 26, 43, 0.09) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
+.dot-grid-light {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
+/* Reveal-on-scroll (progressive enhancement; content is visible by default) */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.marquee-track {
+  animation: var(--animate-marquee);
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
