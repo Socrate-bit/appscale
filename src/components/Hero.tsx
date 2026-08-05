@@ -10,7 +10,7 @@ export default function Hero() {
         <div>
           <Reveal>
             <p className="font-mono text-xs uppercase tracking-[0.28em] text-muted">
-              /// Apps portfolio
+              // 001 · Building &amp; Scaling apps
             </p>
           </Reveal>
 
