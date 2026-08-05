@@ -15,18 +15,17 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="mt-6 font-serif text-6xl leading-[0.95] tracking-tight text-navy sm:text-7xl lg:text-[5.5rem]">
-              Building and
-              <br />
-              scaling <span className="italic text-accent">apps.</span>
+            <h1 className="mt-6 font-serif text-5xl leading-[1.03] tracking-tight text-navy sm:text-6xl lg:text-7xl">
+              Building the world&apos;s highest-performing app{" "}
+              <span className="italic text-accent">portfolio.</span>
             </h1>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="mt-8 max-w-md text-lg leading-relaxed text-muted">
-              We design, launch, and grow software products end-to-end, from
-              first prototype to profitable scale. Advanced statistical methods
-              and AI agentic loops drive every point of conversion.
+              We design, launch, and scale apps end-to-end. Advanced statistics
+              and agentic AI systems drive every point of conversion. From
+              prototype to profit, faster than anyone.
             </p>
           </Reveal>
 

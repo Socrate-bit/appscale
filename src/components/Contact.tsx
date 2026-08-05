@@ -76,12 +76,6 @@ export default function Contact() {
               <p className="mt-3 text-cream/60">
                 Thanks for reaching out. We&apos;ll be in touch shortly.
               </p>
-              <button
-                onClick={() => setStatus("idle")}
-                className="mt-8 font-mono text-xs uppercase tracking-[0.15em] text-accent-soft underline-offset-4 hover:underline"
-              >
-                Send another →
-              </button>
             </div>
           ) : (
             <form onSubmit={onSubmit} className="grid grid-cols-1 gap-6 sm:grid-cols-2">

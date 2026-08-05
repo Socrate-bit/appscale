@@ -25,8 +25,8 @@ const founders: Founder[] = [
     role: "CTO",
     location: "San Francisco",
     bullets: [
-      "AI Engineer",
-      "Research in machine learning",
+      "AI Researcher",
+      "Advanced research in machine learning",
       "Breakthrough AI and automation applied to mobile apps",
     ],
     linkedin: "https://www.linkedin.com/in/lucas-soullier-060351379/",
