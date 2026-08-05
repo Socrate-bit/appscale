@@ -18,7 +18,7 @@ export default function Stats() {
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.28em] text-accent-soft">
-            // 002 · Traction
+            // 002 · Performance
           </p>
           <h2 className="mt-5 max-w-2xl font-serif text-4xl leading-tight sm:text-5xl">
             What we&apos;ve <span className="italic">shipped.</span>
