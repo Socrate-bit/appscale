@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-6 py-10 sm:flex-row sm:items-center lg:px-10">
         <div className="flex items-center gap-2.5">
           <Logo tone="dark" className="h-8 w-8" />
-          <span className="font-serif text-xl">AppScale</span>
+          <span className="font-serif text-xl">AppScales</span>
         </div>
 
         <nav className="flex flex-wrap gap-x-8 gap-y-2 font-mono text-[11px] uppercase tracking-[0.18em] text-cream/50">
@@ -22,7 +22,7 @@ export default function Footer() {
         </nav>
 
         <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/40">
-          © {new Date().getFullYear()} AppScale · San Francisco
+          © {new Date().getFullYear()} AppScales · San Francisco
         </p>
       </div>
     </footer>

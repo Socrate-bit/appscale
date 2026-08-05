@@ -33,7 +33,7 @@ export default function Logo({
   const cy = (r: number) => 60 + (r - 2) * pitch - s / 2;
 
   return (
-    <svg viewBox="0 0 120 120" className={className} aria-label="AppScale logo">
+    <svg viewBox="0 0 120 120" className={className} aria-label="AppScales logo">
       <circle cx="60" cy="60" r="58" fill={disc} />
       {cells.map(([c, r], i) => (
         <rect

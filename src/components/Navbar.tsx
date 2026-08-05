@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         <a href="#home" className="flex items-center gap-2.5 text-navy">
           <Logo tone="light" className="h-9 w-9" />
-          <span className="font-serif text-2xl tracking-tight">AppScale</span>
+          <span className="font-serif text-2xl tracking-tight">AppScales</span>
         </a>
 
         <nav className="hidden items-center gap-10 md:flex">

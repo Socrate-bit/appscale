@@ -21,7 +21,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AppScale · Building and scaling apps",
+  title: "AppScales · Building and scaling apps",
   description:
     "A studio that builds, launches, and scales apps. $390k MRR and $6M+ generated.",
 };
