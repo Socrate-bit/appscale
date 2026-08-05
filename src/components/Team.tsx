@@ -51,7 +51,7 @@ const founders: Founder[] = [
 const team: Member[] = [
   { name: "Sofia", initials: "SO", role: "Head of Growth", school: "HEC Paris" },
   { name: "Léa", initials: "LE", role: "Head of Marketing", school: "ESSEC Business School" },
-  { name: "Viktor", initials: "VI", role: "Head of Engineering", school: "École Polytechnique" },
+  { name: "Viktor", initials: "VI", role: "Head of Engineering", school: "MIT" },
   { name: "Maya", initials: "MA", role: "Head of Product", school: "ESCP Business School" },
   { name: "Théo", initials: "TH", role: "Product Designer", school: "Gobelins Paris" },
 ];
