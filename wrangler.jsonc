@@ -1,0 +1,12 @@
+{
+  // Cloudflare Workers — static assets only (no Worker script).
+  // `npm run build` produces ./out (Next.js static export), which
+  // `npx wrangler deploy` uploads. Service name must match the
+  // Cloudflare Workers project ("appscales").
+  "name": "appscales",
+  "compatibility_date": "2026-08-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
