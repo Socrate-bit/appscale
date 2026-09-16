@@ -1,6 +1,6 @@
 import Reveal from "./Reveal";
 
-type Founder = {
+export type Founder = {
   name: string;
   initials: string;
   role: string;
@@ -10,15 +10,15 @@ type Founder = {
   photo?: string; // drop a file in /public and set e.g. "/adam.jpg"
 };
 
-type Member = {
+export type Member = {
   name: string;
   initials: string;
   role: string;
-  school: string;
+  school?: string;
   photo?: string;
 };
 
-const founders: Founder[] = [
+export const founders: Founder[] = [
   {
     name: "Lucas",
     initials: "LU",
@@ -48,13 +48,19 @@ const founders: Founder[] = [
 ];
 
 // Fictional team roster — swap names, roles, and schools for your real team.
-const team: Member[] = [
+export const team: Member[] = [
   { name: "Sofia", initials: "SO", role: "Head of Growth", school: "HEC Paris" },
   { name: "Léa", initials: "LE", role: "Head of Marketing", school: "ESSEC Business School" },
   { name: "Viktor", initials: "VI", role: "Head of Engineering", school: "MIT" },
   { name: "Maya", initials: "MA", role: "Head of Product", school: "ESCP Business School" },
   { name: "Théo", initials: "TH", role: "Product Designer", school: "Gobelins Paris" },
 ];
+
+// Static class names so Tailwind picks them up.
+const rosterCols: Record<number, string> = {
+  3: "lg:grid-cols-3",
+  4: "lg:grid-cols-4",
+};
 
 function LinkedInIcon() {
   return (
@@ -64,7 +70,15 @@ function LinkedInIcon() {
   );
 }
 
-function FounderCard({ m, delay }: { m: Founder; delay: number }) {
+function FounderCard({
+  m,
+  delay,
+  linkedinLabel,
+}: {
+  m: Founder;
+  delay: number;
+  linkedinLabel: string;
+}) {
   return (
     <Reveal
       delay={delay}
@@ -109,7 +123,7 @@ function FounderCard({ m, delay }: { m: Founder; delay: number }) {
         className="relative mt-8 inline-flex items-center gap-2 border border-cream/20 px-4 py-2.5 font-mono text-[11px] uppercase tracking-[0.18em] text-cream/80 transition-colors hover:border-accent hover:text-cream"
       >
         <LinkedInIcon />
-        Connect on LinkedIn
+        {linkedinLabel}
       </a>
     </Reveal>
   );
@@ -137,48 +151,80 @@ function MemberCard({ m, delay }: { m: Member; delay: number }) {
       <p className="mt-1 font-mono text-[10px] uppercase leading-relaxed tracking-[0.16em] text-muted">
         {m.role}
       </p>
-      <p className="mt-3 border-t border-navy/10 pt-3 font-mono text-[10px] uppercase tracking-[0.14em] text-accent">
-        {m.school}
-      </p>
+      {m.school && (
+        <p className="mt-3 border-t border-navy/10 pt-3 font-mono text-[10px] uppercase tracking-[0.14em] text-accent">
+          {m.school}
+        </p>
+      )}
     </Reveal>
   );
 }
 
-export default function Team() {
+export default function Team({
+  label = "// 003 · The team",
+  title = (
+    <>
+      Our <span className="italic text-accent">team.</span>
+    </>
+  ),
+  intro = "A team spanning product, engineering, growth, and design, pairing deep AI research with businesses scaled to millions in revenue.",
+  founders: founderList = founders,
+  members = team,
+  rosterLabel = "/// The wider team",
+  linkedinLabel = "Connect on LinkedIn",
+}: {
+  label?: string;
+  title?: React.ReactNode;
+  intro?: string;
+  founders?: Founder[];
+  members?: Member[];
+  rosterLabel?: string;
+  linkedinLabel?: string;
+}) {
   return (
     <section id="team" className="dot-grid relative overflow-hidden py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.28em] text-muted">
-            // 003 · The team
+            {label}
           </p>
           <h2 className="mt-5 max-w-2xl font-serif text-4xl leading-tight text-navy sm:text-5xl">
-            Our <span className="italic text-accent">team.</span>
+            {title}
           </h2>
-          <p className="mt-6 max-w-xl text-lg text-muted">
-            A team spanning product, engineering, growth, and design, pairing
-            deep AI research with businesses scaled to millions in revenue.
-          </p>
+          <p className="mt-6 max-w-xl text-lg text-muted">{intro}</p>
         </Reveal>
 
         {/* Founders */}
         <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2">
-          {founders.map((m, i) => (
-            <FounderCard key={m.name} m={m} delay={i * 120} />
+          {founderList.map((m, i) => (
+            <FounderCard
+              key={m.name}
+              m={m}
+              delay={i * 120}
+              linkedinLabel={linkedinLabel}
+            />
           ))}
         </div>
 
         {/* Team roster */}
-        <Reveal className="mt-16">
-          <p className="font-mono text-xs uppercase tracking-[0.22em] text-muted">
-            /// The wider team
-          </p>
-        </Reveal>
-        <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
-          {team.map((m, i) => (
-            <MemberCard key={m.name} m={m} delay={i * 90} />
-          ))}
-        </div>
+        {members.length > 0 && (
+          <>
+            <Reveal className="mt-16">
+              <p className="font-mono text-xs uppercase tracking-[0.22em] text-muted">
+                {rosterLabel}
+              </p>
+            </Reveal>
+            <div
+              className={`mt-8 grid grid-cols-2 gap-5 sm:grid-cols-3 ${
+                rosterCols[members.length] ?? "lg:grid-cols-5"
+              }`}
+            >
+              {members.map((m, i) => (
+                <MemberCard key={m.name} m={m} delay={i * 90} />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </section>
   );

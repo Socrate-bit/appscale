@@ -1,6 +1,18 @@
 import Logo from "./Logo";
 
-export default function Footer() {
+const defaultLinks = [
+  { href: "#home", label: "Home" },
+  { href: "#team", label: "Team" },
+  { href: "#contact", label: "Contact" },
+];
+
+export default function Footer({
+  links = defaultLinks,
+  location = "San Francisco",
+}: {
+  links?: { href: string; label: string }[];
+  location?: string;
+}) {
   return (
     <footer className="border-t border-cream/10 bg-navy text-cream">
       <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-6 py-10 sm:flex-row sm:items-center lg:px-10">
@@ -10,19 +22,15 @@ export default function Footer() {
         </div>
 
         <nav className="flex flex-wrap gap-x-8 gap-y-2 font-mono text-[11px] uppercase tracking-[0.18em] text-cream/50">
-          <a href="#home" className="hover:text-cream">
-            Home
-          </a>
-          <a href="#team" className="hover:text-cream">
-            Team
-          </a>
-          <a href="#contact" className="hover:text-cream">
-            Contact
-          </a>
+          {links.map((l) => (
+            <a key={l.href} href={l.href} className="hover:text-cream">
+              {l.label}
+            </a>
+          ))}
         </nav>
 
         <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/40">
-          © {new Date().getFullYear()} AppScales · San Francisco
+          © {new Date().getFullYear()} AppScales · {location}
         </p>
       </div>
     </footer>

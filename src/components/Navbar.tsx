@@ -1,17 +1,31 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Logo from "./Logo";
 
-const links = [
+type NavLink = { href: string; label: string };
+
+const defaultLinks: NavLink[] = [
   { href: "#home", label: "Home" },
   { href: "#team", label: "Team" },
   { href: "#contact", label: "Contact" },
 ];
 
-export default function Navbar() {
+export default function Navbar({
+  links = defaultLinks,
+  cta = { href: "#contact", label: "Apply" },
+  homeHref = "#home",
+}: {
+  links?: NavLink[];
+  cta?: NavLink;
+  homeHref?: string;
+}) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const ctaExternal = cta.href.startsWith("http")
+    ? { target: "_blank", rel: "noopener noreferrer" }
+    : {};
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -29,10 +43,10 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <a href="#home" className="flex items-center gap-2.5 text-navy">
+        <Link href={homeHref} className="flex items-center gap-2.5 text-navy">
           <Logo tone="light" className="h-9 w-9" />
           <span className="font-serif text-2xl tracking-tight">AppScales</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
           {links.map((l) => (
@@ -48,10 +62,11 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <a
-            href="#contact"
+            href={cta.href}
+            {...ctaExternal}
             className="group hidden items-center gap-2 border border-navy bg-navy px-5 py-3 font-mono text-xs uppercase tracking-[0.15em] text-cream shadow-[4px_4px_0_0_rgba(124,107,240,0.9)] transition-transform hover:-translate-y-0.5 sm:inline-flex"
           >
-            Apply
+            {cta.label}
             <span className="transition-transform group-hover:translate-x-0.5">
               →
             </span>
@@ -103,11 +118,12 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href={cta.href}
+            {...ctaExternal}
             onClick={() => setOpen(false)}
             className="mt-4 mb-4 inline-flex items-center justify-center gap-2 bg-navy px-5 py-3 font-mono text-xs uppercase tracking-[0.15em] text-cream"
           >
-            Apply →
+            {cta.label} →
           </a>
         </nav>
       </div>
