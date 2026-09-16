@@ -56,7 +56,7 @@ export default function StudioWork() {
             // 004 · Réalisations
           </p>
           <h2 className="mt-5 max-w-2xl font-serif text-4xl leading-tight sm:text-5xl">
-            Ce qu&apos;on a déjà <span className="italic">shippé.</span>
+            Exemples de <span className="italic">design.</span>
           </h2>
           <p className="mt-6 max-w-xl text-lg text-cream/60">
             Designées, développées et publiées en interne.
