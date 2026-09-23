@@ -3,19 +3,19 @@ import Reveal from "../Reveal";
 const pillars = [
   {
     title: "Une app qui convertit",
-    body: "L'IA vous sort des écrans qui fonctionnent, pas des écrans qui vendent. On construit l'onboarding et le paywall pour transformer vos visiteurs en clients payants.",
+    body: "L'IA génère des écrans qui fonctionnent, pas des écrans qui convertissent. On construit l'onboarding et le paywall qui transforment vos visiteurs en utilisateurs actifs, puis en clients payants.",
   },
   {
-    title: "Un design fait par des pros",
-    body: "Une app générée ressemble à toutes les autres apps générées. On priorise les features, on soigne l'apparence, on pense l'UI/UX pour l'usage réel. Vos utilisateurs reviennent.",
+    title: "Un design unique",
+    body: "Une app générée ressemble à toutes les autres apps générées. On vous crée un design et une identité qui n'appartiennent qu'à vous.",
   },
   {
-    title: "Zéro piège sur les stores",
-    body: "L'IA ne sait pas pourquoi Apple refuse une app. Nous oui. Reviews, Play Store, notifs, offline : on évite les blocages avant qu'ils n'arrivent.",
+    title: "De l'itération, pas juste une V1",
+    body: "Shipper une V1, tout le monde peut le faire. Le vrai travail commence après : écouter les retours, itérer et faire évoluer le produit. On reste à bord.",
   },
   {
-    title: "Prête à encaisser vos premiers utilisateurs",
-    body: "Un prototype IA tient pour une démo, pas pour mille utilisateurs. Code propre, monitoring et analytics dès le jour 1 : elle tient quand ça décolle.",
+    title: "Solide à l'échelle",
+    body: "Une app générée par IA est pleine de défauts d'architecture : elle tient en démo, pas quand les utilisateurs arrivent. On pose des fondations qui encaissent la charge.",
   },
   {
     title: "Cybersécurité",

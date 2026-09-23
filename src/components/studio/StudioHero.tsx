@@ -17,17 +17,18 @@ export default function StudioHero() {
 
           <Reveal delay={80}>
             <h1 className="mt-6 font-serif text-5xl leading-[1.03] tracking-tight text-navy sm:text-6xl lg:text-7xl">
-              Lancez votre app sans embaucher un seul{" "}
-              <span className="italic text-accent">développeur.</span>
+              Votre équipe tech, sans{" "}
+              <span className="italic text-accent">embaucher.</span>
             </h1>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted">
-              Votre équipe tech, sans embaucher. Sans le CTO à 80k€, sans les 6
-              mois de recrutement. On conçoit, on lance et on fait grandir votre app de A à Z. On
-              reste à bord après le lancement, itération après itération. Et on
-              fait ce que l&apos;IA ne sait pas encore faire.
+              Lancez votre app sans embaucher un seul développeur. Sans le CTO à
+              80&nbsp;k€, sans les 6 mois de recrutement. On conçoit, on lance et
+              on fait grandir votre app de A à Z. On reste à bord après le
+              lancement, itération après itération. Et on fait tout ce que
+              l&apos;IA ne sait pas encore faire.
             </p>
           </Reveal>
 
