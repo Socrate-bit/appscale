@@ -1,4 +1,5 @@
 import Reveal from "../Reveal";
+import AutoplayVideo from "./AutoplayVideo";
 
 // Featured live app — the headline proof of the studio page.
 const liveApp = {
@@ -13,6 +14,38 @@ const liveApp = {
   ],
 };
 
+type Shot = {
+  alt: string;
+  src: string; // image, or poster frame when `video` is set
+  video?: string;
+};
+
+// Other projects — converted from the original GIF/JPG exports into /public/work.
+const shots: Shot[] = [
+  {
+    alt: "App d'apprentissage : cours, planning et messagerie",
+    src: "/work/study.jpg",
+    video: "/work/study.mp4",
+  },
+  { alt: "Onboarding d'une app bien-être", src: "/work/onboarding.jpg", video: "/work/onboarding.mp4" },
+  { alt: "App de planification financière", src: "/work/finance.webp" },
+  { alt: "App de pet-sitting de quartier", src: "/work/pets.webp" },
+  { alt: "App de suivi fitness", src: "/work/fitness.webp" },
+  { alt: "App maison connectée", src: "/work/smart-home.webp" },
+  { alt: "Dashboard web de contrôle à distance", src: "/work/dashboard.jpg", video: "/work/dashboard.mp4" },
+];
+
+function Media({ shot }: { shot: Shot }) {
+  const cls =
+    "h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]";
+  return shot.video ? (
+    <AutoplayVideo className={cls} src={shot.video} poster={shot.src} label={shot.alt} />
+  ) : (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img className={cls} src={shot.src} alt={shot.alt} loading="lazy" />
+  );
+}
+
 export default function StudioWork() {
   return (
     <section id="realisations" className="bg-navy text-cream">
@@ -26,6 +59,7 @@ export default function StudioWork() {
           </h2>
         </Reveal>
 
+        {/* Featured: Levio */}
         <Reveal
           delay={120}
           className="relative mt-14 overflow-hidden rounded-3xl border border-accent/40 bg-navy-800"
@@ -70,6 +104,37 @@ export default function StudioWork() {
             </ul>
           </div>
         </Reveal>
+
+        {/* Other projects: horizontal, swipeable filmstrip */}
+        <Reveal className="mt-20 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <p className="font-mono text-xs uppercase tracking-[0.22em] text-accent-soft">
+            /// Autres projets
+          </p>
+          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/40">
+            Designées, développées et publiées
+          </p>
+        </Reveal>
+
+        {/* Bleeds to the viewport edges while staying aligned with the container. */}
+        <div className="-mx-6 mt-8 overflow-x-auto pb-6 [scrollbar-width:thin] lg:-mx-10">
+          <ul className="flex snap-x snap-mandatory gap-5 px-6 lg:px-10">
+            {shots.map((s, i) => (
+              <Reveal
+                as="li"
+                key={s.src}
+                delay={Math.min(i, 4) * 60}
+                className="group w-[18rem] flex-none snap-start sm:w-[22rem]"
+              >
+                <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-navy-800">
+                  <Media shot={s} />
+                </div>
+                <p className="mt-4 font-mono text-[11px] uppercase leading-relaxed tracking-[0.16em] text-cream/50">
+                  {s.alt}
+                </p>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

@@ -12,7 +12,6 @@ import StudioWhy from "@/components/studio/StudioWhy";
 import StudioProcess from "@/components/studio/StudioProcess";
 import StudioOffers from "@/components/studio/StudioOffers";
 import StudioWork from "@/components/studio/StudioWork";
-import StudioDesigns from "@/components/studio/StudioDesigns";
 import StudioFaq from "@/components/studio/StudioFaq";
 import StudioCta from "@/components/studio/StudioCta";
 import { whatsappUrl } from "@/lib/whatsapp";
@@ -82,9 +81,8 @@ export default function Services() {
         <StudioProcess />
         <StudioOffers />
         <StudioWork />
-        <StudioDesigns />
         <Team
-          label="// 006 · Qui sommes-nous"
+          label="// 005 · Qui sommes-nous"
           title={
             <>
               Qui sommes-<span className="italic text-accent">nous ?</span>
