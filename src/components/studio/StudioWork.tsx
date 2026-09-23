@@ -113,13 +113,16 @@ export default function StudioWork() {
               </a>
             </div>
 
-            {/* Real app screens, staggered like a phone trio */}
-            <div className="flex items-end justify-center gap-3 sm:gap-4">
+            {/* Real app screens: a swipeable strip on phones (home screen first),
+                a staggered trio from `sm` up. */}
+            <div className="-mx-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-8 pb-2 [scrollbar-width:none] sm:mx-0 sm:items-end sm:justify-center sm:overflow-visible sm:px-0 sm:pb-0">
               {liveApp.screens.map((sc, i) => (
                 <div
                   key={sc.src}
-                  className={`overflow-hidden rounded-[1.25rem] border border-white/15 bg-navy shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] ${
-                    i === 1 ? "w-[34%] -translate-y-6" : "w-[30%]"
+                  className={`flex-none snap-center overflow-hidden rounded-[1.25rem] border border-white/15 bg-navy shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] ${
+                    i === 1
+                      ? "order-first w-[64%] sm:order-none sm:w-[34%] sm:-translate-y-6"
+                      : "w-[64%] sm:w-[30%]"
                   }`}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
