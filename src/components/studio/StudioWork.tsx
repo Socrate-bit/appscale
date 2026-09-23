@@ -57,11 +57,16 @@ export default function StudioWork() {
       <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.28em] text-accent-soft">
-            // 004 · Réalisations
+            // 004 · Étude de cas client
           </p>
           <h2 className="mt-5 max-w-2xl font-serif text-4xl leading-tight sm:text-5xl">
-            Une app live, <span className="italic">en production.</span>
+            Construite pour un client.{" "}
+            <span className="italic">En production aujourd&apos;hui.</span>
           </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-cream/60">
+            Design, développement, onboarding, paywall, publication : livrée en
+            7&nbsp;jours, 10&nbsp;k utilisateurs et 4,7&nbsp;★ depuis.
+          </p>
         </Reveal>
 
         {/* Featured: Levio */}
