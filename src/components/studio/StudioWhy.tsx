@@ -6,6 +6,10 @@ const pillars = [
     body: "L'IA génère des écrans qui fonctionnent, pas des écrans qui convertissent. On construit l'onboarding et le paywall qui transforment vos visiteurs en utilisateurs actifs, puis en clients payants.",
   },
   {
+    title: "Cybersécurité",
+    body: "Les apps générées par IA sont truffées de failles : clés exposées, données non protégées, paiements mal sécurisés. On verrouille tout dès le départ. Pas de fuite, pas de crise.",
+  },
+  {
     title: "Un design unique",
     body: "Une app générée ressemble à toutes les autres apps générées. On vous crée un design et une identité qui n'appartiennent qu'à vous.",
   },
@@ -16,10 +20,6 @@ const pillars = [
   {
     title: "Solide à l'échelle",
     body: "Une app générée par IA est pleine de défauts d'architecture : elle tient en démo, pas quand les utilisateurs arrivent. On pose des fondations qui encaissent la charge.",
-  },
-  {
-    title: "Cybersécurité",
-    body: "Les apps générées par IA sont truffées de failles : clés exposées, données non protégées, paiements mal sécurisés. On verrouille tout dès le départ. Pas de fuite, pas de crise.",
   },
 ];
 
