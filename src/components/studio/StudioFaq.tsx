@@ -2,6 +2,10 @@ import Reveal from "../Reveal";
 
 const faqs = [
   {
+    q: "Qu'est-ce qui est inclus ?",
+    a: "Tout ce qu'il faut pour une app de complexité modérée : design, développement, backend et tests, sur un périmètre défini ensemble et validé par écrit avant de démarrer. Projet plus complexe ? On vous fait une offre sur mesure.",
+  },
+  {
     q: "Vous utilisez quelles technos ?",
     a: "Flutter par défaut, natif ou web si c'est le bon choix.",
   },
