@@ -12,6 +12,11 @@ const liveApp = {
     { value: "10 k", label: "utilisateurs" },
     { value: "7 jours", label: "de construction" },
   ],
+  screens: [
+    { src: "/work/levio-congrats.jpg", alt: "Levio : écran de félicitations après le réveil" },
+    { src: "/work/levio-home.jpg", alt: "Levio : accueil avec streak et prochaine alarme" },
+    { src: "/work/levio-missions.jpg", alt: "Levio : choix de la mission de réveil" },
+  ],
 };
 
 type Shot = {
@@ -66,7 +71,7 @@ export default function StudioWork() {
         >
           <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-[radial-gradient(circle,rgba(124,107,240,0.4),transparent_70%)]" />
 
-          <div className="relative grid grid-cols-1 gap-12 p-8 sm:p-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:p-16">
+          <div className="relative grid grid-cols-1 gap-12 p-8 sm:p-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:p-16">
             <div>
               <p className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-accent-soft">
                 <span className="relative flex h-2 w-2">
@@ -79,6 +84,20 @@ export default function StudioWork() {
                 {liveApp.name}
               </h3>
               <p className="mt-4 max-w-md text-xl text-cream/65">{liveApp.tagline}</p>
+
+              <ul className="mt-8 grid grid-cols-3 gap-4 border-t border-cream/12 pt-6">
+                {liveApp.stats.map((s) => (
+                  <li key={s.label}>
+                    <p className="font-serif text-3xl tracking-tight text-cream sm:text-4xl">
+                      {s.value}
+                    </p>
+                    <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-cream/50">
+                      {s.label}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+
               <a
                 href={liveApp.storeUrl}
                 target="_blank"
@@ -90,18 +109,20 @@ export default function StudioWork() {
               </a>
             </div>
 
-            <ul className="grid grid-cols-3 gap-6 border-t border-cream/12 pt-8 lg:grid-cols-1 lg:gap-0 lg:divide-y lg:divide-cream/12 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
-              {liveApp.stats.map((s) => (
-                <li key={s.label} className="lg:py-7 lg:first:pt-0 lg:last:pb-0">
-                  <p className="font-serif text-4xl tracking-tight text-cream sm:text-5xl lg:text-6xl">
-                    {s.value}
-                  </p>
-                  <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-cream/50">
-                    {s.label}
-                  </p>
-                </li>
+            {/* Real app screens, staggered like a phone trio */}
+            <div className="flex items-end justify-center gap-3 sm:gap-4">
+              {liveApp.screens.map((sc, i) => (
+                <div
+                  key={sc.src}
+                  className={`overflow-hidden rounded-[1.25rem] border border-white/15 bg-navy shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] ${
+                    i === 1 ? "w-[34%] -translate-y-6" : "w-[30%]"
+                  }`}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={sc.src} alt={sc.alt} className="h-auto w-full" loading="lazy" />
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </Reveal>
 
