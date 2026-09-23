@@ -68,7 +68,7 @@ export default function StudioWork() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid grid-cols-1 gap-5 md:auto-rows-[15rem] md:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-5 md:auto-rows-[minmax(15rem,auto)] md:grid-cols-3">
           {shots.map((s, i) => (
             <Reveal
               key={s.src}
