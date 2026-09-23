@@ -3,7 +3,7 @@ import Reveal from "../Reveal";
 const pillars = [
   {
     title: "Construire le bon produit",
-    body: "L'IA construit ce qu'on lui demande, jamais ce qu'il faudrait construire. On affine votre idée, on étudie le marché et on valide le product-market fit avant d'écrire une ligne de code.",
+    body: "L'IA construit ce qu'on lui demande, jamais ce qu'il faudrait construire. On affine votre idée et on étudie le marché avant d'écrire une ligne de code.",
   },
   {
     title: "Une app qui convertit",

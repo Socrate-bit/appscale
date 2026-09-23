@@ -29,6 +29,11 @@ const liveApp = {
   tagline: "Réveil à missions interactives.",
   storeUrl:
     "https://apps.apple.com/fr/app/levio-r%C3%A9veil-%C3%A0-missions/id6762027853",
+  stats: [
+    { value: "4,7 ★", label: "sur l'App Store" },
+    { value: "10 k", label: "utilisateurs" },
+    { value: "7 jours", label: "de construction" },
+  ],
 };
 
 function Media({ shot }: { shot: Shot }) {
@@ -92,6 +97,16 @@ export default function StudioWork() {
                 {liveApp.name}
               </h3>
               <p className="mt-2 text-cream/60">{liveApp.tagline}</p>
+              <ul className="mt-6 flex flex-wrap gap-x-8 gap-y-4">
+                {liveApp.stats.map((s) => (
+                  <li key={s.label}>
+                    <p className="font-serif text-2xl text-cream">{s.value}</p>
+                    <p className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.18em] text-cream/50">
+                      {s.label}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
             <a
               href={liveApp.storeUrl}

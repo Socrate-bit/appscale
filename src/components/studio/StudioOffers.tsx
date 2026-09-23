@@ -26,7 +26,7 @@ const offers: Offer[] = [
     name: "App complète en 7 jours",
     price: "4 900 €",
     unit: "à partir de · prix fixe",
-    body: "Backend inclus, publiée sur les stores. Périmètre validé par écrit avant de démarrer.",
+    body: "Backend inclus. Périmètre validé par écrit avant de démarrer.",
     guarantee: "Itération jusqu'à satisfaction.",
     featured: true,
   },
