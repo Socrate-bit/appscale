@@ -24,7 +24,7 @@ const offers: Offer[] = [
   {
     step: "Offre 2",
     name: "App complète en 7 jours",
-    price: "5 900 €",
+    price: "4 900 €",
     unit: "à partir de · prix fixe",
     body: "Backend inclus, publiée sur les stores. Périmètre validé par écrit avant de démarrer.",
     guarantee: "Chaque semaine de retard offerte.",
@@ -153,13 +153,6 @@ export default function StudioOffers() {
         </Reveal>
 
         <Reveal className="mt-14 flex flex-col items-start gap-6 border-t border-navy/10 pt-10 sm:flex-row sm:items-center sm:justify-between">
-          <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-navy/80">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60 motion-reduce:animate-none" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
-            </span>
-            3 créneaux disponibles jusqu&apos;à fin octobre
-          </p>
           <WhatsAppButton />
         </Reveal>
       </div>

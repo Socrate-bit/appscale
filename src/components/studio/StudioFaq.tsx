@@ -2,10 +2,6 @@ import Reveal from "../Reveal";
 
 const faqs = [
   {
-    q: "Et si mon app est plus complexe ?",
-    a: "On le dit à l'appel de cadrage et on ajuste délai et prix avant de commencer.",
-  },
-  {
     q: "Vous utilisez quelles technos ?",
     a: "Flutter par défaut, natif ou web si c'est le bon choix.",
   },

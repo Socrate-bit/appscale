@@ -21,9 +21,6 @@ export default function StudioCta() {
         <div className="mt-10">
           <WhatsAppButton tone="dark" />
         </div>
-        <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.18em] text-cream/45">
-          3 créneaux disponibles jusqu&apos;à fin octobre
-        </p>
       </Reveal>
     </section>
   );
