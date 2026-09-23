@@ -63,8 +63,8 @@ export default function StudioWork() {
             Étude de cas <span className="italic">client.</span>
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-cream/60">
-            Design, développement, onboarding, paywall, publication : livrée en
-            7&nbsp;jours, 10&nbsp;k utilisateurs et 4,7&nbsp;★ depuis.
+            Design, développement, onboarding, paywall, publication : tout ce
+            qu&apos;on propose, livré à un client.
           </p>
         </Reveal>
 
