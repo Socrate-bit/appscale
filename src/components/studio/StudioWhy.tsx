@@ -14,10 +14,6 @@ const pillars = [
     body: "Une app générée ressemble à toutes les autres apps générées. On vous crée un design et une identité qui n'appartiennent qu'à vous.",
   },
   {
-    title: "De l'itération, pas juste une V1",
-    body: "Shipper une V1, tout le monde peut le faire. Le vrai travail commence après : écouter les retours, itérer et faire évoluer le produit. On reste à bord.",
-  },
-  {
     title: "Solide à l'échelle",
     body: "Une app générée par IA est pleine de défauts d'architecture : elle tient en démo, pas quand les utilisateurs arrivent. On pose des fondations qui encaissent la charge.",
   },
@@ -39,12 +35,6 @@ export default function StudioWhy() {
             <h2 className="mt-5 max-w-2xl font-serif text-4xl leading-tight sm:text-5xl">
               Ce que l&apos;IA ne fait <span className="italic">pas.</span>
             </h2>
-          </Reveal>
-          <Reveal delay={120}>
-            <p className="max-w-md text-lg leading-relaxed text-cream/65">
-              N&apos;importe qui peut générer une app en un prompt. Le problème,
-              c&apos;est tout ce qui arrive après.
-            </p>
           </Reveal>
         </div>
 

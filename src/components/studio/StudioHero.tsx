@@ -24,9 +24,9 @@ export default function StudioHero() {
 
           <Reveal delay={160}>
             <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted">
-              Lancez votre app sans embaucher un seul développeur. Sans le CTO à
-              80&nbsp;k€, sans les 6 mois de recrutement. On conçoit, on lance et
-              on fait grandir votre app de A à Z. On reste à bord après le
+              N&apos;importe qui peut générer une app en un prompt. Le problème,
+              c&apos;est tout ce qui arrive après. On conçoit, on lance et on
+              fait grandir votre app de A à Z. On reste à bord après le
               lancement, itération après itération. Et on fait tout ce que
               l&apos;IA ne sait pas encore faire.
             </p>
