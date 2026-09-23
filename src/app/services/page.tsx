@@ -36,7 +36,7 @@ const links = [
 const founderCopy: Record<string, string[]> = {
   Lucas: [
     "Expert en apps mobiles, 10 ans d'expérience",
-    "Des centaines d'apps mobiles lancées",
+    "Des dizaines d'apps mobiles lancées",
     "Pilote le développement et la mise en production de votre app",
   ],
   Adam: [
@@ -88,7 +88,7 @@ export default function Services() {
               Qui sommes-<span className="italic text-accent">nous ?</span>
             </>
           }
-          intro="Des centaines d'apps lancées, plusieurs apps scalées. Une équipe design, tech et growth qui conçoit, développe et fait grandir votre app."
+          intro="Des dizaines d'apps lancées, plusieurs apps scalées. Une équipe design, tech et growth qui conçoit, développe et fait grandir votre app."
           founders={studioFounders}
           members={studioTeam}
           rosterLabel="/// L'équipe qui construit votre app"
