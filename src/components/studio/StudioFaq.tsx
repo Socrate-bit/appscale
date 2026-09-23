@@ -11,11 +11,11 @@ const faqs = [
   },
   {
     q: "Et si je ne suis pas satisfait ?",
-    a: "Le prototype est remboursé. Pour l'app complète, le périmètre est figé par écrit et chaque semaine de retard est offerte.",
+    a: "Le prototype est remboursé. Pour l'app complète, le périmètre est figé par écrit et on enchaîne les tours de corrections jusqu'à satisfaction.",
   },
   {
     q: "Après la livraison ?",
-    a: "Un mois de corrections offert, puis maintenance à partir de 490 €/mois (mises à jour, petits changements, nouvelles features), ou passation à votre équipe.",
+    a: "Deux semaines de corrections offertes, en plusieurs tours jusqu'à satisfaction, puis maintenance à partir de 490 €/mois (mises à jour, petits changements, nouvelles features), ou passation à votre équipe.",
   },
 ];
 

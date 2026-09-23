@@ -27,7 +27,7 @@ const offers: Offer[] = [
     price: "4 900 €",
     unit: "à partir de · prix fixe",
     body: "Backend inclus, publiée sur les stores. Périmètre validé par écrit avant de démarrer.",
-    guarantee: "Chaque semaine de retard offerte.",
+    guarantee: "Deux semaines de corrections offertes après livraison, plusieurs tours jusqu'à satisfaction.",
     featured: true,
   },
   {
@@ -36,7 +36,7 @@ const offers: Offer[] = [
     price: "490 €/mois",
     unit: "à partir de · sans engagement",
     body: "Mises à jour, petits changements et nouvelles features chaque mois. Un dev qui connaît votre code, sans embaucher.",
-    guarantee: "Un mois de corrections offert après livraison.",
+    guarantee: "Sans engagement, résiliable à tout moment.",
   },
 ];
 
