@@ -11,7 +11,7 @@ const steps = [
   },
   {
     title: "App livrée en 7 jours",
-    body: "Développement, tests et publication sur les stores. Vous gardez tout le code.",
+    body: "Développement et tests. Vous gardez tout le code.",
   },
   {
     title: "Maintenance",
