@@ -27,7 +27,7 @@ const offers: Offer[] = [
     price: "4 900 €",
     unit: "à partir de · prix fixe",
     body: "Backend inclus, publiée sur les stores. Périmètre validé par écrit avant de démarrer.",
-    guarantee: "Deux semaines de corrections offertes après livraison, plusieurs tours jusqu'à satisfaction.",
+    guarantee: "Itération jusqu'à satisfaction.",
     featured: true,
   },
   {
