@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "Et la publication sur les stores ?",
-    a: "On peut la prendre en charge. Comptes développeur, fiches store, review Apple et Google : on connaît le process et ses pièges, et on vous le fait passer plus vite.",
+    a: "En option, on s'en occupe pour vous. Comptes développeur, fiches store, review Apple et Google : on connaît le process et ses pièges, et on vous le fait passer plus vite.",
   },
   {
     q: "Et si je ne suis pas satisfait ?",
