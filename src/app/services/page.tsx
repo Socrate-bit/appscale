@@ -35,7 +35,7 @@ const links = [
 // Studio-specific founder copy; photos, names and links come from Team.
 const founderCopy: Record<string, string[]> = {
   Lucas: [
-    "Expert en apps mobiles, 10 ans d'expérience",
+    "Expert en apps mobiles, Flutter & iOS",
     "Des dizaines d'apps mobiles lancées",
     "Pilote le développement et la mise en production de votre app",
   ],

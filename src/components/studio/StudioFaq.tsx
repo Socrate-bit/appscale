@@ -14,6 +14,10 @@ const faqs = [
     a: "Prototype en 48h, puis app complète en 7 jours sur un périmètre validé par écrit. Si votre projet demande plus de temps, on vous le dit dès l'appel.",
   },
   {
+    q: "Et la publication sur les stores ?",
+    a: "On peut la prendre en charge. Comptes développeur, fiches store, review Apple et Google : on connaît le process et ses pièges, et on vous le fait passer plus vite.",
+  },
+  {
     q: "Et si je ne suis pas satisfait ?",
     a: "Le prototype est remboursé. Pour l'app complète, le périmètre est figé par écrit et on enchaîne les tours de corrections jusqu'à satisfaction.",
   },
