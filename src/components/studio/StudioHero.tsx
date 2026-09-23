@@ -36,22 +36,14 @@ export default function StudioHero() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <WhatsAppButton />
               <a
-                href="#offres"
-                className="font-mono text-xs uppercase tracking-[0.15em] text-navy/70 underline-offset-8 hover:text-navy hover:underline"
+                href="#realisations"
+                className="group/proof inline-flex flex-wrap items-center gap-x-2 font-mono text-xs uppercase tracking-[0.15em] text-navy/70 underline-offset-8 hover:text-navy hover:underline"
               >
-                Voir les offres
+                <span className="text-accent">Dernière app livrée :</span>
+                <span>7&nbsp;jours · 10&nbsp;k utilisateurs · 4,7&nbsp;★</span>
+                <span className="transition-transform group-hover/proof:translate-x-1">→</span>
               </a>
             </div>
-          </Reveal>
-
-          <Reveal delay={320}>
-            <a
-              href="#realisations"
-              className="mt-8 inline-flex flex-wrap items-center gap-x-2 font-mono text-[11px] uppercase tracking-[0.18em] text-muted transition-colors hover:text-navy"
-            >
-              <span className="text-accent">Dernière app livrée :</span>
-              <span>7&nbsp;jours · 10&nbsp;k utilisateurs · 4,7&nbsp;★ sur l&apos;App Store</span>
-            </a>
           </Reveal>
         </div>
 
