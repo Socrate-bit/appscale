@@ -33,7 +33,7 @@ export default function StudioFaq() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.28em] text-muted">
-            // 006 · FAQ
+            // 007 · FAQ
           </p>
           <h2 className="mt-5 font-serif text-4xl leading-tight text-navy sm:text-5xl">
             Questions <span className="italic text-accent">fréquentes.</span>

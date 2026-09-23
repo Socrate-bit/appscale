@@ -8,7 +8,7 @@ export default function StudioCta() {
 
       <Reveal className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-24 text-center lg:py-32">
         <p className="font-mono text-xs uppercase tracking-[0.28em] text-accent-soft">
-          // 007 · Contact
+          // 008 · Contact
         </p>
         <h2 className="mt-5 font-serif text-4xl leading-tight sm:text-6xl">
           Vous avez l&apos;idée.{" "}
