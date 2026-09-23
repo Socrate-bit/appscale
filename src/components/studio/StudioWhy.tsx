@@ -3,7 +3,7 @@ import Reveal from "../Reveal";
 const pillars = [
   {
     title: "Savoir quoi construire",
-    body: "L'IA construit ce qu'on lui demande, pas ce qu'il faudrait construire. Le vrai enjeu, ce n'est pas de sortir une app, c'est de sortir une app qui résout un vrai problème. On affine votre idée et votre vision, on étudie le marché et on valide le product-market fit avant d'écrire une ligne de code.",
+    body: "L'IA construit ce qu'on lui demande, jamais ce qu'il faudrait construire. On affine votre idée, on étudie le marché et on valide le product-market fit avant d'écrire une ligne de code.",
   },
   {
     title: "Une app qui convertit",
