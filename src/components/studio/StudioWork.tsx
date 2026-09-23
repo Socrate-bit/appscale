@@ -64,7 +64,7 @@ export default function StudioWork() {
             Exemples de <span className="italic">design.</span>
           </h2>
           <p className="mt-6 max-w-xl text-lg text-cream/60">
-            Designées, développées et publiées en interne.
+            Designées, développées et publiées.
           </p>
         </Reveal>
 
