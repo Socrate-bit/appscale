@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -35,6 +36,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col bg-cream text-navy font-sans">
         {children}
+        {/* Contentsquare analytics (site-wide). afterInteractive == the
+            original async tag: loads early, never blocks rendering. */}
+        <Script
+          src="https://t.contentsquare.net/uxa/dce3560f65157.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
